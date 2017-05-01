@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model='ir.ui.view' id='dowfreight_company_form'>
+            <field name="name">dowfreight.company.form</field>
+            <field name="model">dowfreight.company</field>
+            <field name="arch" type="xml">
+                <form string="Company">
+                    <sheet string="Company">
+                        <h1>
+                            <field name="name" placeholder="Company Name..." class="oe_inline"/>
+                        </h1>
+	                    <group>
+	                        <group>
+                                <field name="external_id"/>
+	                        </group>
+	                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfreight_company_tree'>
+            <field name="name">dowfreight.company.tree</field>
+            <field name="model">dowfreight.company</field>
+            <field name="arch" type="xml">
+                <tree string="Company">
+                    <field name="external_id"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfreight_company_act'>
+            <field name="name">Company</field>
+            <field name="res_model">dowfreight.company</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new company.
+              </p><p>
+                You can create multiple companies.
+              </p>
+            </field>
+        </record>
+
+        <menuitem name="Dow Freight" id="dowfreight_root" sequence="10" groups="group_dowfreight_user"/>
+        <menuitem name="Masterdata" parent="dowfreight_root" id="dowfreight_masterdata" sequence="1" groups="group_dowfreight_manager"/>
+        <menuitem action="dowfreight_company_act" parent="dowfreight_masterdata" id="dowfreight_company_menu" groups="group_dowfreight_manager"/>
+
+        <record model='ir.ui.view' id='dowfreight_location_form'>
+            <field name="name">dowfreight.location.form</field>
+            <field name="model">dowfreight.location</field>
+            <field name="arch" type="xml">
+                <form string="Location">
+                    <sheet string="Location">
+                        <h1>
+                            <field name="name" placeholder="Location Name..." class="oe_inline"/>
+                        </h1>
+	                    <group>
+	                        <group>
+                                <field name="external_id"/>
+	                        </group>
+	                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfreight_location_tree'>
+            <field name="name">dowfreight.location.tree</field>
+            <field name="model">dowfreight.location</field>
+            <field name="arch" type="xml">
+                <tree string="Location">
+                    <field name="external_id"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfreight_location_act'>
+            <field name="name">Location</field>
+            <field name="res_model">dowfreight.location</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new location.
+              </p><p>
+                You can create multiple locations.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="dowfreight_location_act" parent="dowfreight_masterdata" id="dowfreight_location_menu" groups="group_dowfreight_manager"/>
+
+        <record model='ir.ui.view' id='dowfreight_carrier_form'>
+            <field name="name">dowfreight.carrier.form</field>
+            <field name="model">dowfreight.carrier</field>
+            <field name="arch" type="xml">
+                <form string="Carrier">
+                    <sheet string="Carrier">
+                        <h1>
+                            <field name="name" placeholder="Carrier Name..." class="oe_inline"/>
+                        </h1>
+	                    <group>
+	                        <group>
+                                <field name="external_id"/>
+	                        </group>
+	                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfreight_carrier_tree'>
+            <field name="name">dowfreight.carrier.tree</field>
+            <field name="model">dowfreight.carrier</field>
+            <field name="arch" type="xml">
+                <tree string="Carrier">
+                    <field name="external_id"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfreight_carrier_act'>
+            <field name="name">Carrier</field>
+            <field name="res_model">dowfreight.carrier</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new carrier.
+              </p><p>
+                You can create multiple carriers.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="dowfreight_carrier_act" parent="dowfreight_masterdata" id="dowfreight_carrier_menu" groups="group_dowfreight_manager"/>
+
+        <record model='ir.ui.view' id='dowfreight_carrier_bizshared_form'>
+            <field name="name">dowfreight.carrier.bizshared.form</field>
+            <field name="model">dowfreight.carrier.bizshared</field>
+            <field name="arch" type="xml">
+                <form string="Business Shared">
+                    <sheet string="Business Shared">
+	                    <group>
+	                        <group>
+								<field name="company_id"/>
+								<field name="carrier_id"/>
+								<field name="bizshared"/>						
+	                        </group>
+	                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="dowfreight_carrier_bizshared_search" >
+                <field name="name">dowfreight.carrier.bizshared.search</field>
+                <field name="model">dowfreight.carrier.bizshared</field>
+                <field name="arch" type="xml">
+                    <search string="Business Shared">
+                        <group  expand='0' string='Group By...' colspan="4" col="8">
+                                <filter string='Company' name='group_by_company' icon="terp-stock_effects-object-colorize" domain="[]" context="{'group_by' : 'company_id'}" />
+                         </group>
+                    </search>
+                </field>
+        </record>
+
+		<record model='ir.ui.view' id='dowfreight_carrier_bizshared_tree'>
+            <field name="name">dowfreight.carrier.bizshared.tree</field>
+            <field name="model">dowfreight.carrier.bizshared</field>
+            <field name="arch" type="xml">
+                <tree string="Business Shared">
+                    <field name="company_id"/>
+					<field name="carrier_id"/>
+                    <field name="bizshared"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfreight_carrier_bizshared_act'>
+            <field name="name">Business Shared</field>
+            <field name="res_model">dowfreight.carrier.bizshared</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_group_by_company":1}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new business shared.
+              </p><p>
+                You can create multiple business shared.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="dowfreight_carrier_bizshared_act" parent="dowfreight_masterdata" id="dowfreight_carrier_bizshared_menu" groups="group_dowfreight_manager"/>
+
+        <record model='ir.ui.view' id='dowfreight_carrier_cost_form'>
+            <field name="name">dowfreight.carrier.cost.form</field>
+            <field name="model">dowfreight.carrier.cost</field>
+            <field name="arch" type="xml">
+                <form string="Carrier Cost">
+                    <sheet>
+                        <div class="oe_title">
+							<label for="company_id" />
+							<field name="company_id"/>
+							<label for="carrier_id" />
+							<field name="carrier_id"/>
+							<label for="location_id" />
+							<field name="location_id"/>
+							<label for="freight_cost" />
+							<field name="freight_cost"/>						
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="dowfreight_carrier_cost_search" >
+                <field name="name">dowfreight.carrier.cost.search</field>
+                <field name="model">dowfreight.carrier.cost</field>
+                <field name="arch" type="xml">
+                    <search string="Carrier Cost">
+                        <group  expand='0' string='Group By...' colspan="4" col="8">
+                                <filter string='Company' name='group_by_company' icon="terp-stock_effects-object-colorize" domain="[]" context="{'group_by' : 'company_id'}" />
+                                <filter string='Carrier' name='group_by_carrier' icon="terp-stock_effects-object-colorize" domain="[]" context="{'group_by' : 'carrier_id'}" />
+                                <filter string='Location' name='group_by_location' icon="terp-stock_effects-object-colorize" domain="[]" context="{'group_by' : 'location_id'}" />
+                         </group>
+                    </search>
+                </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfreight_carrier_cost_tree'>
+            <field name="name">dowfreight.carrier.cost.tree</field>
+            <field name="model">dowfreight.carrier.cost</field>
+            <field name="arch" type="xml">
+                <tree string="Carrier Cost">
+                    <field name="company_id"/>
+					<field name="carrier_id"/>
+					<field name="location_id"/>
+                    <field name="freight_cost"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfreight_carrier_cost_act'>
+            <field name="name">Carrier Cost</field>
+            <field name="res_model">dowfreight.carrier.cost</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_group_by_company":1,"search_default_group_by_carrier":1}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new carrier cost.
+              </p><p>
+                You can create multiple carriers cost.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="dowfreight_carrier_cost_act" parent="dowfreight_masterdata" id="dowfreight_carrier_cost_menu" groups="group_dowfreight_manager"/>
+
+        <record model='ir.ui.view' id='dowfreight_deliverysheet_form'>
+            <field name="name">dowfreight.deliverysheet.form</field>
+            <field name="model">dowfreight.deliverysheet</field>
+            <field name="arch" type="xml">
+                <form string="Delivery Sheet">
+
+                    <header>
+                        <button name="act_delivery_import" string="Import Delivery" attrs="{'invisible': [('stage_id', '!=', 'draft')]}" class="oe_highlight" groups="dowfreight.group_dowfreight_user"/>
+                        <button name="act_calculate" string="Calculate" attrs="{'invisible': [('stage_id', '!=', 'delivery_imported')]}" class="oe_highlight" groups="dowfreight.group_dowfreight_user"/>
+                        <button name="act_approve" string="Approve" attrs="{'invisible': [('stage_id', '!=', 'calculated')]}" class="oe_highlight" groups="dowfreight.group_dowfreight_user"/>
+                        <button name="act_export_to_ecc" string="Export to ECC" attrs="{'invisible': [('stage_id', '!=', 'approved')]}" class="oe_highlight" groups="dowfreight.group_dowfreight_user"/>
+                        <button name="act_notify_carrier" string="Notify Carrier" attrs="{'invisible': [('stage_id', '!=', 'exported_to_ecc')]}" class="oe_highlight" groups="dowfreight.group_dowfreight_user"/>
+                        <button name="act_back2draft" string="Back to Draft" attrs="{'invisible': [('stage_id', 'in', ('draft','exported_to_ecc','carrier_notified'))]}" groups="dowfreight.group_dowfreight_user"/>
+                        <field name="stage_id" widget="statusbar" clickable="True"/>
+                    </header>
+
+                    <sheet string="Delivery Sheet">
+                        <h1>
+                            <field name="name" placeholder="Delivery Sheet Name..." class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="company_id"/>
+                                <field name="date"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Deliveries Imported">
+                                <field name="delivery_imported_ids">
+                                    <tree string="Deliveries Imported" editable="bottom">
+                                        <field name="name"/>
+                                        <field name="location_id"/>
+                                        <field name="carrier_id"/>
+                                        <field name="freight_cost"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Deliveries Suggested">
+                                <field name="delivery_suggested_ids">
+                                    <tree string="Deliveries Suggested" editable="bottom">
+                                        <field name="name"/>
+                                        <field name="location_id"/>
+                                        <field name="carrier_id"/>
+                                        <field name="freight_cost"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Deliveries Approved">
+                                <field name="delivery_approved_ids">
+                                    <tree string="Deliveries Approved" editable="bottom">
+                                        <field name="name"/>
+                                        <field name="location_id"/>
+                                        <field name="carrier_id"/>
+                                        <field name="freight_cost"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="dowfreight_deliverysheet_search" >
+                <field name="name">dowfreight.deliverysheet.search</field>
+                <field name="model">dowfreight.deliverysheet</field>
+                <field name="arch" type="xml">
+                    <search string="Delivery Sheet">
+                        <group  expand='0' string='Group By...' colspan="4" col="8">
+                                <filter string='Company' name='group_by_company' icon="terp-stock_effects-object-colorize" domain="[]" context="{'group_by' : 'company_id'}" />
+                         </group>
+                    </search>
+                </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfreight_deliverysheet_tree'>
+            <field name="name">dowfreight.deliverysheet.tree</field>
+            <field name="model">dowfreight.deliverysheet</field>
+            <field name="arch" type="xml">
+                <tree string="Delivery Sheet">
+                    <field name="company_id"/>
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="stage_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfreight_deliverysheet_act'>
+            <field name="name">Delivery Sheet</field>
+            <field name="res_model">dowfreight.deliverysheet</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_group_by_company":1}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new delivery sheet.
+              </p><p>
+                You can create multiple deliveries sheet.
+              </p>
+            </field>
+        </record>
+
+        <menuitem name="Processing" parent="dowfreight_root" id="dowfreight_processing" sequence="2" groups="group_dowfreight_user"/>
+        <menuitem action="dowfreight_deliverysheet_act" parent="dowfreight_processing" id="dowfreight_deliverysheet_menu" groups="group_dowfreight_user"/>
+
+
+        <record model='ir.actions.act_window' id='dowfreight_costreduction_act'>
+            <field name="name">Cost Reduction</field>
+            <field name="res_model">dowfreight.deliverysheet</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new cost reduction.
+              </p><p>
+                You can create multiple costs reduction.
+              </p>
+            </field>
+        </record>
+
+        <menuitem name="Reporting" parent="dowfreight_root" id="dowfreight_reporting" sequence="3" groups="group_dowfreight_manager"/>
+        <menuitem action="dowfreight_costreduction_act" parent="dowfreight_reporting" id="dowfreight_costreduction_menu" groups="group_dowfreight_manager"/>
+
+    </data>
+</openerp>

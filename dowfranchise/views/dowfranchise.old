@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model='ir.ui.view' id='dowfranchise_culture_form'>
+            <field name="name">dowfranchise.culture.form</field>
+            <field name="model">dowfranchise.culture</field>
+            <field name="arch" type="xml">
+                <form string="Culture">
+                    <sheet string="Culture">
+                        <group>
+                            <field name="name"/>
+                            <field name="business_ids" widget="many2many_tags" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_culture_tree'>
+            <field name="name">dowfranchise.culture.tree</field>
+            <field name="model">dowfranchise.culture</field>
+            <field name="arch" type="xml">
+                <tree string="Culture">
+                    <field name="name"/>
+                    <field name="business_ids"/>                    
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_culture_act'>
+            <field name="name">Culture</field>
+            <field name="res_model">dowfranchise.culture</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new culture.
+              </p><p>
+                You can create multiple cultures.
+              </p>
+            </field>
+        </record>
+
+        <menuitem name="Dow Franchise" id="dowfranchise_root" sequence="10" groups="group_dowfranchise_user"/>
+        <menuitem name="Masterdata" parent="dowfranchise_root" id="dowfranchise_masterdata" sequence="1" groups="group_dowfranchise_user"/>
+        <menuitem action="dowfranchise_culture_act" parent="dowfranchise_masterdata" id="dowfranchise_culture_menu" groups="group_dowfranchise_user"/>
+
+        <record model='ir.ui.view' id='dowfranchise_businessline_form'>
+            <field name="name">dowfranchise.businessline.form</field>
+            <field name="model">dowfranchise.businessline</field>
+            <field name="arch" type="xml">
+                <form string="Business Line">
+                    <sheet string="Business Line">
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_businessline_tree'>
+            <field name="name">dowfranchise.businessline.tree</field>
+            <field name="model">dowfranchise.businessline</field>
+            <field name="arch" type="xml">
+                <tree string="Business Line">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_businessline_act'>
+            <field name="name">Business Line</field>
+            <field name="res_model">dowfranchise.businessline</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new business line.
+              </p><p>
+                You can create multiple business lines.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="dowfranchise_businessline_act" parent="dowfranchise_masterdata" id="dowfranchise_businessline_menu" groups="group_dowfranchise_user"/>
+
+        <record model='ir.ui.view' id='dowfranchise_business_form'>
+            <field name="name">dowfranchise.business.form</field>
+            <field name="model">dowfranchise.business</field>
+            <field name="arch" type="xml">
+                <form string="Business">
+                    <sheet string="Business">
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_business_tree'>
+            <field name="name">dowfranchise.business.tree</field>
+            <field name="model">dowfranchise.business</field>
+            <field name="arch" type="xml">
+                <tree string="Business">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_business_act'>
+            <field name="name">Business</field>
+            <field name="res_model">dowfranchise.business</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new business.
+              </p><p>
+                You can create multiple business.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="dowfranchise_business_act" parent="dowfranchise_masterdata" id="dowfranchise_business_menu" groups="group_dowfranchise_user"/>
+        
+        <record model='ir.ui.view' id='dowfranchise_attribute_form'>
+            <field name="name">dowfranchise.attribute.form</field>
+            <field name="model">dowfranchise.attribute</field>
+            <field name="arch" type="xml">
+                <form string="Attribute">
+                    <sheet string="Attribute">
+                        <group>
+                            <field name="name" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_attribute_tree'>
+            <field name="name">dowfranchise.attribute.tree</field>
+            <field name="model">dowfranchise.attribute</field>
+            <field name="arch" type="xml">
+                <tree string="Attribute">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_attribute_act'>
+            <field name="name">Attribute</field>
+            <field name="res_model">dowfranchise.attribute</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new attribute.
+              </p><p>
+                You can create multiple attributes.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="dowfranchise_attribute_act" parent="dowfranchise_masterdata" id="dowfranchise_attribute_menu" groups="group_dowfranchise_user"/>
+
+        <record model='ir.ui.view' id='dowfranchise_criteria_form'>
+            <field name="name">dowfranchise.criteria.form</field>
+            <field name="model">dowfranchise.criteria</field>
+            <field name="arch" type="xml">
+                <form string="Criteria">
+                    <sheet string="Criteria">
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="attribute_id"/>
+                                <field name="business_ids" widget="many2many_tags" />
+                                <field name="weight"/>
+                                <field name="weight_readonly"/>
+                                </group>
+                        </group>    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_criteria_tree'>
+            <field name="name">dowfranchise.criteria.tree</field>
+            <field name="model">dowfranchise.criteria</field>
+            <field name="arch" type="xml">
+                <tree string="Criteria">
+                    <field name="name"/>
+                    <field name="attribute_id"/>
+                    <field name="business_ids"/>
+                    <field name="weight"/>
+                    <field name="weight_readonly"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_criteria_act'>
+            <field name="name">Criteria</field>
+            <field name="res_model">dowfranchise.criteria</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new criteria.
+              </p><p>
+                You can create multiple criterias.
+              </p>
+            </field>
+        </record>
+        
+        <menuitem action="dowfranchise_criteria_act" parent="dowfranchise_masterdata" id="dowfranchise_criteria_menu" groups="group_dowfranchise_user"/>
+      
+    </data>
+</openerp>
+    

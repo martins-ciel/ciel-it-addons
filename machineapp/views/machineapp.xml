@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <menuitem name="Machine Application" id="machineapp_root" sequence="10"
+            groups="group_machineapp_user"/>
+        <menuitem name="Masterdata" parent="machineapp_root" id="machineapp_masterdata" sequence="10" groups="group_machineapp_user"/>
+
+        <record model='ir.ui.view' id='machineapp_plant_form'>
+            <field name="name">machineapp.plant.form</field>
+            <field name="model">machineapp.plant</field>
+            <field name="arch" type="xml">
+                <form string="plant">
+                    <sheet string="plant">
+                        <group>
+                            <field name="name"/>
+                            <field name="parent_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='machineapp_plant_tree'>
+            <field name="name">machineapp.plant.tree</field>
+            <field name="model">machineapp.plant</field>
+            <field name="arch" type="xml">
+                <tree string="plant">
+                    <field name="name"/>
+                    <field name="parent_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='machineapp_plant_act'>
+            <field name="name">Plant</field>
+            <field name="res_model">machineapp.plant</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new plant.
+              </p><p>
+                You can create multiple plants.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="machineapp_plant_act" parent="machineapp_masterdata" id="machineapp_plant_menu" sequence="10" groups="group_machineapp_user"/>
+
+        <record model='ir.ui.view' id='machineapp_workcenter_form'>
+            <field name="name">machineapp.workcenter.form</field>
+            <field name="model">machineapp.workcenter</field>
+            <field name="arch" type="xml">
+                <form string="workcenter">
+                    <sheet string="workcenter">
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="parent_id"/>
+                            <field name="plant_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='machineapp_workcenter_tree'>
+            <field name="name">machineapp.workcenter.tree</field>
+            <field name="model">machineapp.workcenter</field>
+            <field name="arch" type="xml">
+                <tree string="workcenter">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="parent_id"/>
+                    <field name="plant_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='machineapp_workcenter_act'>
+            <field name="name">WorkCenter</field>
+            <field name="res_model">machineapp.workcenter</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new work center.
+              </p><p>
+                You can create multiple work centers.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="machineapp_workcenter_act" parent="machineapp_masterdata" id="machineapp_workcenter_menu" sequence="20" groups="group_machineapp_user"/>
+
+        <record model='ir.ui.view' id='machineapp_machine_form'>
+            <field name="name">machineapp.machine.form</field>
+            <field name="model">machineapp.machine</field>
+            <field name="arch" type="xml">
+                <form string="machine">
+                    <sheet string="machine">
+                        <group>
+                            <field name="name"/>
+                            <field name="workcenter_id"/>
+                            <field name="barcode"/>
+                            <field name="max_perc_downtime"/>
+                            <field name="max_perc_setup"/>
+                            <field name="min_perc_prod_time"/>                            
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='machineapp_machine_tree'>
+            <field name="name">machineapp.machine.tree</field>
+            <field name="model">machineapp.machine</field>
+            <field name="arch" type="xml">
+                <tree string="machine">
+                    <field name="name"/>
+                    <field name="workcenter_id"/>
+                    <field name="barcode"/>
+                    <field name="max_perc_downtime"/>
+                    <field name="max_perc_setup"/>
+                    <field name="min_perc_prod_time"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='machineapp_machine_act'>
+            <field name="name">Machine</field>
+            <field name="res_model">machineapp.machine</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new machine.
+              </p><p>
+                You can create multiple machines.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="machineapp_machine_act" parent="machineapp_masterdata" id="machineapp_machine_menu" sequence="30" groups="group_machineapp_user"/>
+
+        <record model='ir.ui.view' id='machineapp_operator_form'>
+            <field name="name">machineapp.operator.form</field>
+            <field name="model">machineapp.operator</field>
+            <field name="arch" type="xml">
+                <form string="operator">
+                    <sheet string="operator">
+                        <group>
+                            <field name="name"/>
+                            <field name="plant_id"/>
+                            <field name="barcode"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='machineapp_operator_tree'>
+            <field name="name">machineapp.operator.tree</field>
+            <field name="model">machineapp.operator</field>
+            <field name="arch" type="xml">
+                <tree string="operator">
+                    <field name="name"/>
+                    <field name="plant_id"/>
+                    <field name="barcode"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='machineapp_operator_act'>
+            <field name="name">Operator</field>
+            <field name="res_model">machineapp.operator</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new operator.
+              </p><p>
+                You can create multiple operators.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="machineapp_operator_act" parent="machineapp_masterdata" id="machineapp_operator_menu" sequence="40" groups="group_machineapp_user"/>
+
+        <record model='ir.ui.view' id='machineapp_action_form'>
+            <field name="name">machineapp.action.form</field>
+            <field name="model">machineapp.action</field>
+            <field name="arch" type="xml">
+                <form string="action">
+                    <sheet string="action">
+                        <group>
+                            <field name="name"/>
+                            <field name="barcode"/>
+                            <field name="type"/>
+                            <field name="production_order"/>
+                            <field name="qtd_produced"/>
+                            <field name="close_production"/>
+                            <field name="qtd_used"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='machineapp_action_tree'>
+            <field name="name">machineapp.action.tree</field>
+            <field name="model">machineapp.action</field>
+            <field name="arch" type="xml">
+                <tree string="action">
+                    <field name="name"/>
+                    <field name="barcode"/>
+                    <field name="type"/>
+                    <field name="production_order"/>
+                    <field name="qtd_produced"/>
+                    <field name="close_production"/>
+                    <field name="qtd_used"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='machineapp_action_act'>
+            <field name="name">Action</field>
+            <field name="res_model">machineapp.action</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new action.
+              </p><p>
+                You can create multiple actions.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="machineapp_action_act" parent="machineapp_masterdata" id="machineapp_action_menu" sequence="50" groups="group_machineapp_user"/>
+
+        <record model='ir.ui.view' id='machineapp_finishgood_form'>
+            <field name="name">machineapp.finishgood.form</field>
+            <field name="model">machineapp.finishgood</field>
+            <field name="arch" type="xml">
+                <form string="action">
+                    <sheet string="action">
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="barcode"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='machineapp_finishgood_tree'>
+            <field name="name">machineapp.finishgood.tree</field>
+            <field name="model">machineapp.finishgood</field>
+            <field name="arch" type="xml">
+                <tree string="action">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="barcode"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='machineapp_finishgood_act'>
+            <field name="name">Finish Good</field>
+            <field name="res_model">machineapp.finishgood</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new finish good.
+              </p><p>
+                You can create multiple finish goods.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="machineapp_finishgood_act" parent="machineapp_masterdata" id="machineapp_finishgood_menu" sequence="60" groups="group_machineapp_user"/>
+
+        <record model='ir.ui.view' id='machineapp_rawmaterial_form'>
+            <field name="name">machineapp.rawmaterial.form</field>
+            <field name="model">machineapp.rawmaterial</field>
+            <field name="arch" type="xml">
+                <form string="action">
+                    <sheet string="action">
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="barcode"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='machineapp_rawmaterial_tree'>
+            <field name="name">machineapp.rawmaterial.tree</field>
+            <field name="model">machineapp.rawmaterial</field>
+            <field name="arch" type="xml">
+                <tree string="action">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="barcode"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='machineapp_rawmaterial_act'>
+            <field name="name">Raw Material</field>
+            <field name="res_model">machineapp.rawmaterial</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new raw material.
+              </p><p>
+                You can create multiple raw materials.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="machineapp_rawmaterial_act" parent="machineapp_masterdata" id="machineapp_rawmaterial_menu" sequence="70" groups="group_machineapp_user"/>
+
+        <record model='ir.ui.view' id='machineapp_billofmaterial_form'>
+            <field name="name">machineapp.billofmaterial.form</field>
+            <field name="model">machineapp.billofmaterial</field>
+            <field name="arch" type="xml">
+                <form string="Bill of Material">
+
+                    <sheet string="Bill of Material">
+                        <h1>
+                            <field name="finishgood_id" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="basequantity"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Components">
+                                <field name="component_ids">
+                                    <tree string="Components" editable="bottom">
+                                        <field name="rawmaterial_id"/>
+                                        <field name="quantity"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='machineapp_billofmaterial_tree'>
+            <field name="name">machineapp.billofmaterial.tree</field>
+            <field name="model">machineapp.billofmaterial</field>
+            <field name="arch" type="xml">
+                <tree string="Bill of Material">
+                    <field name="finishgood_id"/>
+                    <field name="basequantity"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='machineapp_billofmaterial_act'>
+            <field name="name">Bill of Material</field>
+            <field name="res_model">machineapp.billofmaterial</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new Bill of Material.
+              </p><p>
+                You can create multiple Bill of Material.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="machineapp_billofmaterial_act" parent="machineapp_masterdata" id="machineapp_billofmaterial_menu" sequence="80" groups="group_machineapp_user"/>
+
+        <record model='ir.ui.view' id='machineapp_routing_form'>
+            <field name="name">machineapp.routing.form</field>
+            <field name="model">machineapp.routing</field>
+            <field name="arch" type="xml">
+                <form string="Routing">
+
+                    <sheet string="Routing">
+                        <h1>
+                            <field name="finishgood_id" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="basequantity"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Operations">
+                                <field name="operation_ids">
+                                    <tree string="Operations" editable="bottom">
+                                        <field name="machine_id"/>
+                                        <field name="minutes"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='machineapp_routing_tree'>
+            <field name="name">machineapp.routing.tree</field>
+            <field name="model">machineapp.routing</field>
+            <field name="arch" type="xml">
+                <tree string="Routing">
+                    <field name="finishgood_id"/>
+                    <field name="basequantity"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='machineapp_routing_act'>
+            <field name="name">Routing</field>
+            <field name="res_model">machineapp.routing</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new Routing.
+              </p><p>
+                You can create multiple Routing.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="machineapp_routing_act" parent="machineapp_masterdata" id="machineapp_routing_menu" sequence="90" groups="group_machineapp_user"/>
+
+        <menuitem name="Daily Operations" parent="machineapp_root" id="machineapp_dailyoperations" sequence="20" groups="group_machineapp_user"/>
+
+        <record model='ir.ui.view' id='machineapp_productionboard_form'>
+            <field name="name">machineapp.productionboard.form</field>
+            <field name="model">machineapp.productionboard</field>
+            <field name="arch" type="xml">
+                <form string="action">
+                    <sheet string="action">
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="barcode"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='machineapp_productionboard_tree'>
+            <field name="name">machineapp.productionboard.tree</field>
+            <field name="model">machineapp.productionboard</field>
+            <field name="arch" type="xml">
+                <tree string="action">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="barcode"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='machineapp_productionboard_act'>
+            <field name="name">Hourly Production Board</field>
+            <field name="res_model">machineapp.productionboard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new raw material.
+              </p><p>
+                You can create multiple raw materials.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="machineapp_productionboard_act" parent="machineapp_dailyoperations" id="machineapp_productionboard_menu" sequence="10" groups="group_machineapp_user"/>
+
+    </data>
+</openerp>
+    

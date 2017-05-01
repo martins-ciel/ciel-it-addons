@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	
+    <template id="sale_order_report_without_prices_document">
+        <t t-call="report.external_layout">
+            <div class="page">
+                <div class="oe_structure"/>
+                <div class="row">
+                    <div class="col-xs-8">
+
+                        <br/>
+                        <strong><div t-field="o.partner_id.name"/></strong>
+                        <div t-field="o.partner_id.cnpj_cpf"/>
+
+                        <br/>
+
+                    </div>
+                </div>
+
+                <h2>
+                    <span t-if="o.state not in ['draft','sent']">Order N° </span>
+                    <span t-if="o.state in ['draft','sent']">Quotation N° </span>
+                    <span t-field="o.name"/>
+                </h2>
+
+                <div class="row mt32 mb32" id="informations">
+                    <div t-if="o.client_order_ref" class="col-xs-4">
+                        <strong>Your Reference:</strong>
+                        <p t-field="o.client_order_ref"/>
+                    </div>
+
+                    <div t-if="o.date_order" class="col-xs-4">
+                        <strong t-if="o.state not in ['draft','sent']">Date Ordered:</strong>
+                        <strong t-if="o.state in ['draft','sent']">Quotation Date:</strong>
+                        <p t-field="o.date_order"/>
+                    </div>
+
+					<div class="col-xs-4">
+						<strong>Delivery Date</strong>
+						<p t-esc="(datetime.datetime.strptime(o.date_order, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(days=max(l.delay for l in o.order_line))).strftime('%d-%m-%Y')"/>
+					</div>
+					
+                </div>
+				
+                <div class="row mt32 mb32" id="informations">
+					
+                    <div t-if="o.user_id.name" class="col-xs-4">
+                        <strong>Salesperson:</strong>
+                        <p t-field="o.user_id.name"/>
+                    </div>
+                    <div t-if="o.payment_term" class="col-xs-4">
+                        <strong>Payment Term:</strong>
+                        <p t-field="o.payment_term"/>
+                    </div>
+					
+                </div>				
+
+				<strong>Notes:</strong>
+                <p t-field="o.note" />
+				
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th class="text-right">Quantity</th>
+                        </tr>
+                   </thead>
+                   <tbody class="sale_tbody">
+                        <tr t-foreach="o.order_line" t-as="l">
+                            <td>
+                               <span t-field="l.name"/>
+                            </td>
+                            <td class="text-right">
+								<t t-if="l.product_uom_qty%1==0">
+									<span t-esc="int(l.product_uom_qty)"/>
+								</t>	
+								<t t-if="not l.product_uom_qty%1==0">
+									<span t-field="l.product_uom_qty"/>
+								</t>	
+                                <span groups="product.group_uom" t-field="l.product_uom"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="oe_structure"/>
+            </div>
+        </t>
+    </template>
+
+    <template id="sale_order_report_without_prices">
+        <t t-call="report.html_container">
+            <t t-foreach="doc_ids" t-as="doc_id">
+                <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'ciel_report.sale_order_report_without_prices_document')"/>
+            </t>
+        </t>
+    </template>
+		<report id="ciel_report_sale_order_report_without_prices"
+			name="ciel_report.sale_order_report_without_prices"
+			file="ciel_report_sale_order_report_without_prices"
+			model="sale.order"
+			report_type="qweb-pdf"
+			string="Sales Order (Without Price)"
+			menu="True"/>
+	</data>
+</openerp>

@@ -1,0 +1,163 @@
+#. module: ciel_report
+#: model:ir.actions.report.xml,name:ciel_report.ciel_report_sale_order_report_without_prices
+msgid "Sales Order (Without Price)"
+msgstr "Cotação / Pedido (sem valor)"
+
+#. module: ciel_report
+#: model:ir.actions.report.xml,name:ciel_report.ciel_report_sale_order_report_with_prices
+msgid "Sales Order (With Price)"
+msgstr "Cotação / Pedido (com valor)"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Date Ordered:"
+msgstr "Data do Pedido:"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Delivery Date"
+msgstr "Data de Entrega"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Notes:"
+msgstr "Observação:"
+
+#. module: ciel_report
+#: field:sale.order.line,name:0 view:website:ciel_report.sale_order_report_without_prices_document
+#: field:sale.order.line,name:0 view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Description"
+msgstr "Descrição"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Disc.(%)"
+msgstr "Desc. (%)"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Invoice address:"
+msgstr "Endereço de Cobrança"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Invoice and shipping address:"
+msgstr "Endereço de cobrança e entrega:"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Order N°"
+msgstr "Pedido N°"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Payment Term:"
+msgstr "Condições de Pagamento:"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Price"
+msgstr "Preço"
+
+#. module: ciel_report
+#: field:sale.advance.payment.inv,qtty:0
+#: field:sale.order.line,product_uom_qty:0
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Quantity"
+msgstr "Quantidade"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Quotation Date:"
+msgstr "Data da Cotação:"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Quotation N°"
+msgstr "Cotação N°"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Salesperson:"
+msgstr "Vendedor:"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Shipping address:"
+msgstr ""
+
+#. module: ciel_report
+#: field:sale.order,amount_tax:0 field:sale.order.line,tax_id:0
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Taxes"
+msgstr "Impostos"
+
+#. module: ciel_report
+#: field:sale.order,amount_freight:0
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Freight"
+msgstr "Frete"
+
+#. module: ciel_report
+#: field:sale.order,amount_costs:0
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Other Costs"
+msgstr "Despesas Acessorias"
+
+#. module: ciel_report
+#: field:sale.order,amount_insurance:0
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Insurance"
+msgstr "Seguro"
+
+#. module: ciel_report
+#: field:sale.order,amount_total:0
+#: view:sale.order.line:sale.view_order_line_tree
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Total"
+msgstr "Total"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Total Without Taxes"
+msgstr "Total Líquido"
+
+#. module: ciel_report
+#: field:sale.order.line,price_unit:0
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Unit Price"
+msgstr "Preço Unitário"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "VAT:"
+msgstr "Imposto:"
+
+#. module: ciel_report
+#: view:website:ciel_report.sale_order_report_without_prices_document
+#: view:website:ciel_report.sale_order_report_with_prices_document
+msgid "Your Reference:"
+msgstr "Sua Referência:"
+

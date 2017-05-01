@@ -1,0 +1,482 @@
+#. module: dowfranchise
+#: field:dowfranchise.request.approval,approval_uid:0
+msgid "Approval"
+msgstr "Aprovador"
+
+#. module: dowfranchise
+#: field:dowfranchise.request.approval,approval_date:0
+msgid "Approval Date"
+msgstr "Data de Aprovação"
+
+#. module: dowfranchise
+#: view:dowfranchise.request:dowfranchise.dowfranchise_request_form
+msgid "Approval Routing"
+msgstr "Roteiro de Aprovação"
+
+#. module: dowfranchise
+#: field:dowfranchise.request,approval_ids:0
+msgid "Approvals"
+msgstr "Aprovadores"
+
+#. module: dowfranchise
+#: view:dowfranchise.request:dowfranchise.dowfranchise_request_form
+msgid "Approve"
+msgstr "Aprova"
+
+#. module: dowfranchise
+#: selection:dowfranchise.request,stage_id:0
+#: selection:dowfranchise.request.approval,status_id:0
+msgid "Approved"
+msgstr "Aprovado"
+
+#. module: dowfranchise
+#: view:dowfranchise.attribute:dowfranchise.dowfranchise_attribute_form
+#: view:dowfranchise.attribute:dowfranchise.dowfranchise_attribute_tree
+#: field:dowfranchise.criteria,attribute_id:0
+#: model:ir.actions.act_window,name:dowfranchise.dowfranchise_attribute_act
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_attribute_menu
+msgid "Attribute"
+msgstr "Atributo"
+
+#. module: dowfranchise
+#: model:ir.model,name:dowfranchise.model_df_attribute
+#: model:ir.model,name:dowfranchise.model_dowfranchise_attribute
+msgid "Attributes"
+msgstr "Atributos"
+
+#. module: dowfranchise
+#: view:dowfranchise.business:dowfranchise.dowfranchise_business_form
+#: view:dowfranchise.business:dowfranchise.dowfranchise_business_tree
+#: field:dowfranchise.businessline,business_ids:0
+#: field:dowfranchise.criteria,business_ids:0
+#: field:dowfranchise.culture,business_ids:0
+#: model:ir.actions.act_window,name:dowfranchise.dowfranchise_business_act
+#: model:ir.model,name:dowfranchise.model_df_business
+#: model:ir.model,name:dowfranchise.model_dowfranchise_business
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_business_menu
+msgid "Business"
+msgstr "Negócio"
+
+#. module: dowfranchise
+#: model:res.groups,name:dowfranchise.group_dowfranchise_business_director
+msgid "Business Director"
+msgstr "Diretor de Negócios"
+
+#. module: dowfranchise
+#: view:dowfranchise.businessline:dowfranchise.dowfranchise_businessline_form
+#: view:dowfranchise.businessline:dowfranchise.dowfranchise_businessline_tree
+#: field:dowfranchise.requesttermination,businessline_ids:0
+#: model:ir.actions.act_window,name:dowfranchise.dowfranchise_businessline_act
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_businessline_menu
+msgid "Business Line"
+msgstr "Linha de Negócio"
+
+#. module: dowfranchise
+#: model:ir.model,name:dowfranchise.model_df_businessline
+#: model:ir.model,name:dowfranchise.model_dowfranchise_businessline
+msgid "Business Lines"
+msgstr "Linhas de Negócio"
+
+#. module: dowfranchise
+#: field:dowfranchise.request.approval,comment:0
+msgid "Comment"
+msgstr "Observações"
+
+#. module: dowfranchise
+#: view:dowfranchise.request:dowfranchise.dowfranchise_request_form
+msgid "Confirm Request"
+msgstr "Confirmar Solicitação"
+
+#. module: dowfranchise
+#: field:dowfranchise.attribute,create_uid:0
+#: field:dowfranchise.business,create_uid:0
+#: field:dowfranchise.businessline,create_uid:0
+#: field:dowfranchise.criteria,create_uid:0
+#: field:dowfranchise.culture,create_uid:0
+#: field:dowfranchise.locationarea,create_uid:0
+#: field:dowfranchise.request,create_uid:0
+#: field:dowfranchise.request.approval,create_uid:0
+#: field:dowfranchise.request.proof,create_uid:0
+#: field:dowfranchise.requesttermination,create_uid:0
+#: field:dowfranchise.terminationreason,create_uid:0
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: dowfranchise
+#: field:dowfranchise.attribute,create_date:0
+#: field:dowfranchise.business,create_date:0
+#: field:dowfranchise.businessline,create_date:0
+#: field:dowfranchise.criteria,create_date:0
+#: field:dowfranchise.culture,create_date:0
+#: field:dowfranchise.locationarea,create_date:0
+#: field:dowfranchise.request,create_date:0
+#: field:dowfranchise.request.approval,create_date:0
+#: field:dowfranchise.request.proof,create_date:0
+#: field:dowfranchise.requesttermination,create_date:0
+#: field:dowfranchise.terminationreason,create_date:0
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: dowfranchise
+#: view:dowfranchise.criteria:dowfranchise.dowfranchise_criteria_form
+#: view:dowfranchise.criteria:dowfranchise.dowfranchise_criteria_tree
+#: model:ir.actions.act_window,name:dowfranchise.dowfranchise_criteria_act
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_criteria_menu
+msgid "Criteria"
+msgstr "Critério"
+
+#. module: dowfranchise
+#: model:ir.model,name:dowfranchise.model_df_criteria
+#: model:ir.model,name:dowfranchise.model_dowfranchise_criteria
+msgid "Criterias"
+msgstr "Critérios"
+
+#. module: dowfranchise
+#: view:dowfranchise.culture:dowfranchise.dowfranchise_culture_form
+#: view:dowfranchise.culture:dowfranchise.dowfranchise_culture_tree
+#: model:ir.actions.act_window,name:dowfranchise.dowfranchise_culture_act
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_culture_menu
+msgid "Culture"
+msgstr "Cultura"
+
+#. module: dowfranchise
+#: model:ir.model,name:dowfranchise.model_df_culture
+#: model:ir.model,name:dowfranchise.model_dowfranchise_culture
+msgid "Cultures"
+msgstr "Culturas"
+
+#. module: dowfranchise
+#: view:dowfranchise.request:dowfranchise.dowfranchise_request_form
+msgid "Decline"
+msgstr "Reprovar"
+
+#. module: dowfranchise
+#: selection:dowfranchise.request,stage_id:0
+#: selection:dowfranchise.request.approval,status_id:0
+msgid "Declined"
+msgstr "Reprovado"
+
+#. module: dowfranchise
+#: model:ir.module.category,name:dowfranchise.module_dowfranchise_category
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_root
+msgid "Dow Franchise"
+msgstr "Dow Franquia"
+
+#. module: dowfranchise
+#: selection:dowfranchise.request,stage_id:0
+msgid "Draft"
+msgstr "Rascunho"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,expected_termination_date:0
+msgid "Expected Termination date"
+msgstr "Data Pretendida da Rescisão"
+
+#. module: dowfranchise
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_formrequest
+msgid "Form Request"
+msgstr "Formulário de solicitação"
+
+#. module: dowfranchise
+#: model:res.groups,name:dowfranchise.group_dowfranchise_franchise_leader
+msgid "Franchise Leader"
+msgstr "Líder de Franquia"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,franchisemanager_uid:0
+msgid "Franchise Manager"
+msgstr "Gerente de Franquia"
+
+#. module: dowfranchise
+#: field:dowfranchise.request.approval,group_id:0
+msgid "Group"
+msgstr "Grupo"
+
+#. module: dowfranchise
+#: field:dowfranchise.attribute,id:0
+#: field:dowfranchise.business,id:0
+#: field:dowfranchise.businessline,id:0
+#: field:dowfranchise.criteria,id:0
+#: field:dowfranchise.culture,id:0
+#: field:dowfranchise.locationarea,id:0
+#: field:dowfranchise.request,id:0
+#: field:dowfranchise.request.approval,id:0
+#: field:dowfranchise.request.proof,id:0
+#: field:dowfranchise.requesttermination,id:0
+#: field:dowfranchise.terminationreason,id:0
+msgid "ID"
+msgstr "Número"
+
+#. module: dowfranchise
+#: field:dowfranchise.attribute,write_uid:0
+#: field:dowfranchise.business,write_uid:0
+#: field:dowfranchise.businessline,write_uid:0
+#: field:dowfranchise.criteria,write_uid:0
+#: field:dowfranchise.culture,write_uid:0
+#: field:dowfranchise.locationarea,write_uid:0
+#: field:dowfranchise.request,write_uid:0
+#: field:dowfranchise.request.approval,write_uid:0
+#: field:dowfranchise.request.proof,write_uid:0
+#: field:dowfranchise.requesttermination,write_uid:0
+#: field:dowfranchise.terminationreason,write_uid:0
+msgid "Last Updated by"
+msgstr "Atualizado por"
+
+#. module: dowfranchise
+#: field:dowfranchise.attribute,write_date:0
+#: field:dowfranchise.business,write_date:0
+#: field:dowfranchise.businessline,write_date:0
+#: field:dowfranchise.criteria,write_date:0
+#: field:dowfranchise.culture,write_date:0
+#: field:dowfranchise.locationarea,write_date:0
+#: field:dowfranchise.request,write_date:0
+#: field:dowfranchise.request.approval,write_date:0
+#: field:dowfranchise.request.proof,write_date:0
+#: field:dowfranchise.requesttermination,write_date:0
+#: field:dowfranchise.terminationreason,write_date:0
+msgid "Last Updated on"
+msgstr "Atualizado em"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,legal_comment:0
+msgid "Legal Comment"
+msgstr "Observações"
+
+#. module: dowfranchise
+#: view:dowfranchise.requesttermination:dowfranchise.dowfranchise_requesttermination_form
+msgid "Legal Departament"
+msgstr "Departamento Jurídico"
+
+#. module: dowfranchise
+#: model:res.groups,name:dowfranchise.group_dowfranchise_legal_department
+msgid "Legal Department"
+msgstr "Departamento Jurídico"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,legal_name:0
+msgid "Legal Name"
+msgstr "Razão Social da Empresa Franqueada"
+
+#. module: dowfranchise
+#: view:dowfranchise.locationarea:dowfranchise.dowfranchise_locationarea_tree
+#: model:ir.actions.act_window,name:dowfranchise.dowfranchise_locationarea_act
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_locationarea_menu
+msgid "Location Area"
+msgstr "Território"
+
+#. module: dowfranchise
+#: model:ir.model,name:dowfranchise.model_df_locationarea
+#: model:ir.model,name:dowfranchise.model_dowfranchise_locationarea
+msgid "Location areas"
+msgstr "Territórios"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,locationarea_id:0
+msgid "Location Area"
+msgstr "Território"
+
+#. module: dowfranchise
+#: view:dowfranchise.requesttermination:dowfranchise.dowfranchise_requesttermination_form
+msgid "Main"
+msgstr "Menu"
+
+#. module: dowfranchise
+#: model:res.groups,name:dowfranchise.group_dowfranchise_marketing_leader
+msgid "Marketing Leader"
+msgstr "Líder de Marketing"
+
+#. module: dowfranchise
+#: model:res.groups,name:dowfranchise.group_dowfranchise_marketing_manager
+msgid "Marketing Manager"
+msgstr "Gerente de Marketing"
+
+#. module: dowfranchise
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_masterdata
+msgid "Masterdata"
+msgstr "Cadastro"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,attended_uids:0
+msgid "Meeting Attended"
+msgstr "Presentes"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,meeting_summary:0
+msgid "Meeting Summary"
+msgstr "Sumário da Reunião"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,meeting_date:0
+msgid "Meeting date"
+msgstr "Data"
+
+#. module: dowfranchise
+#: field:dowfranchise.attribute,name:0
+#: field:dowfranchise.business,name:0
+#: field:dowfranchise.businessline,name:0
+#: field:dowfranchise.criteria,name:0
+#: field:dowfranchise.culture,name:0
+#: field:dowfranchise.locationarea,name:0
+#: field:dowfranchise.request,name:0
+#: field:dowfranchise.request.proof,name:0
+#: field:dowfranchise.terminationreason,name:0
+msgid "Name"
+msgstr "Nome"
+
+#. module: dowfranchise
+#: field:dowfranchise.terminationreason,penalty:0
+msgid "Penalty"
+msgstr "Penalidade Prevista em Contrato"
+
+#. module: dowfranchise
+#: field:dowfranchise.terminationreason,deadline:0
+msgid "Deadline"
+msgstr "Antecedência"
+
+#. module: dowfranchise
+#: selection:dowfranchise.request,stage_id:0
+msgid "On Going"
+msgstr "Em andamento"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,partner_name:0
+msgid "Partner Name"
+msgstr "Sócio Operador"
+
+#. module: dowfranchise
+#: view:dowfranchise.request:dowfranchise.dowfranchise_request_form
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,proof_ids:0
+msgid "Proofs"
+msgstr "Evidências"
+
+#. module: dowfranchise
+#: view:dowfranchise.requesttermination:dowfranchise.dowfranchise_requesttermination_form
+msgid "Proofs Attachaments"
+msgstr "Anexos das Evidências"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,reason_id:0
+msgid "Reason"
+msgstr "Motivo"
+
+#. module: dowfranchise
+#: field:dowfranchise.requesttermination,reason_comment:0
+msgid "Reason Comment"
+msgstr "Justificativa da rescisão"
+
+#. module: dowfranchise
+#: model:res.groups,name:dowfranchise.group_dowfranchise_regional_sales_leader
+msgid "Regional Sales Leader"
+msgstr "RSL - Líder regional de vendas"
+
+#. module: dowfranchise
+#: view:dowfranchise.request:dowfranchise.dowfranchise_request_tree
+#: field:dowfranchise.request.approval,request_id:0
+#: field:dowfranchise.requesttermination,request_id:0
+#: model:ir.actions.act_window,name:dowfranchise.dowfranchise_request_act
+#: model:ir.model,name:dowfranchise.model_df_request
+#: model:ir.model,name:dowfranchise.model_dowfranchise_request
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_request_menu
+msgid "Request"
+msgstr "Solicitação"
+
+#. module: dowfranchise
+#: model:ir.model,name:dowfranchise.model_df_request_approval
+#: model:ir.model,name:dowfranchise.model_dowfranchise_request_approval
+msgid "Request Approval"
+msgstr "Aprovação da solicitação"
+
+#. module: dowfranchise
+#: field:dowfranchise.request,request_date:0
+msgid "Request Date"
+msgstr "Data da solicitação"
+
+#. module: dowfranchise
+#: view:dowfranchise.request:dowfranchise.dowfranchise_request_form
+msgid "Request Name..."
+msgstr "Código da solicitação..."
+
+#. module: dowfranchise
+#: field:dowfranchise.request.proof,requesttermination_id:0
+#: model:ir.actions.act_window,name:dowfranchise.dowfranchise_requesttermination_act
+#: model:ir.model,name:dowfranchise.model_df_requesttermination
+#: model:ir.model,name:dowfranchise.model_dowfranchise_requesttermination
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_requesttermination_menu
+msgid "Request Termination"
+msgstr "Rescisão Contratual"
+
+#. module: dowfranchise
+#: view:dowfranchise.requesttermination:dowfranchise.dowfranchise_requesttermination_form
+msgid "Request Termination Form"
+msgstr "Formulário de Rescisão Contratual"
+
+#. module: dowfranchise
+#: model:ir.model,name:dowfranchise.model_df_request_proof
+#: model:ir.model,name:dowfranchise.model_dowfranchise_request_proof
+msgid "Request Termination Proof"
+msgstr "Request Termination Proof"
+
+#. module: dowfranchise
+#: field:dowfranchise.request,request_uid:0
+msgid "Requested by"
+msgstr "Solicitado por"
+
+#. module: dowfranchise
+#: model:res.groups,name:dowfranchise.group_dowfranchise_sales_director
+msgid "Sales Director"
+msgstr "Diretor de vendas"
+
+#. module: dowfranchise
+#: model:res.groups,name:dowfranchise.group_dowfranchise_sales_leader
+msgid "Sales Leader"
+msgstr "Líder de vendas"
+
+#. module: dowfranchise
+#: view:dowfranchise.request:dowfranchise.dowfranchise_request_form
+msgid "Send Email"
+msgstr "Enviar e-mail"
+
+#. module: dowfranchise
+#: field:dowfranchise.request,stage_id:0
+msgid "Stage"
+msgstr "Estágios"
+
+#. module: dowfranchise
+#: field:dowfranchise.request.approval,status_id:0
+msgid "Status"
+msgstr "Status"
+
+#. module: dowfranchise
+#: view:dowfranchise.requesttermination:dowfranchise.dowfranchise_requesttermination_form
+msgid "Termination Meeting"
+msgstr "Reunião de alinhamento da rescisão"
+
+#. module: dowfranchise
+#: view:dowfranchise.locationarea:dowfranchise.dowfranchise_locationarea_form
+#: view:dowfranchise.locationarea:dowfranchise.dowfranchise_terminationreason_tree
+#: view:dowfranchise.requesttermination:dowfranchise.dowfranchise_requesttermination_form
+#: model:ir.actions.act_window,name:dowfranchise.dowfranchise_terminationreason_act
+#: model:ir.model,name:dowfranchise.model_df_terminationreason
+#: model:ir.model,name:dowfranchise.model_dowfranchise_terminationreason
+#: model:ir.ui.menu,name:dowfranchise.dowfranchise_terminationreason_menu
+msgid "Termination Reason"
+msgstr "Motivo da Rescisão"
+
+#. module: dowfranchise
+#: model:res.groups,name:dowfranchise.group_dowfranchise_user
+msgid "User"    
+msgstr "Usuário"
+
+#. module: dowfranchise
+#: field:dowfranchise.criteria,weight:0
+msgid "Weight"
+msgstr "Peso"
+
+#. module: dowfranchise
+#: field:dowfranchise.criteria,weight_readonly:0
+msgid "Weight Readonly"
+msgstr "Bloquear peso"

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <menuitem name="Dow Franchise" id="dowfranchise_root" sequence="10"
+            groups="group_dowfranchise_user"/>
+        <menuitem name="Masterdata" parent="dowfranchise_root" id="dowfranchise_masterdata" sequence="10" groups="group_dowfranchise_user"/>
+        <menuitem name="Form Request" parent="dowfranchise_root" id="dowfranchise_formrequest" sequence="20" groups="group_dowfranchise_user"/>
+
+        <record model='ir.ui.view' id='dowfranchise_culture_form'>
+            <field name="name">dowfranchise.culture.form</field>
+            <field name="model">dowfranchise.culture</field>
+            <field name="arch" type="xml">
+                <form string="Culture">
+                    <sheet string="Culture">
+                        <group>
+                            <field name="name"/>
+                            <field name="business_ids" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_culture_tree'>
+            <field name="name">dowfranchise.culture.tree</field>
+            <field name="model">dowfranchise.culture</field>
+            <field name="arch" type="xml">
+                <tree string="Culture">
+                    <field name="name"/>
+                    <field name="business_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_culture_act'>
+            <field name="name">Culture</field>
+            <field name="res_model">dowfranchise.culture</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new culture.
+              </p><p>
+                You can create multiple cultures.
+              </p>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_businessline_form'>
+            <field name="name">dowfranchise.businessline.form</field>
+            <field name="model">dowfranchise.businessline</field>
+            <field name="arch" type="xml">
+                <form string="Business Line">
+                    <sheet string="Business Line">
+                        <group>
+                            <field name="name"/>
+                            <field name="business_ids" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_businessline_tree'>
+            <field name="name">dowfranchise.businessline.tree</field>
+            <field name="model">dowfranchise.businessline</field>
+            <field name="arch" type="xml">
+                <tree string="Business Line">
+                    <field name="name"/>
+                    <field name="business_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_businessline_act'>
+            <field name="name">Business Line</field>
+            <field name="res_model">dowfranchise.businessline</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new business line.
+              </p><p>
+                You can create multiple business lines.
+              </p>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_business_form'>
+            <field name="name">dowfranchise.business.form</field>
+            <field name="model">dowfranchise.business</field>
+            <field name="arch" type="xml">
+                <form string="Business">
+                    <sheet string="Business">
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_business_tree'>
+            <field name="name">dowfranchise.business.tree</field>
+            <field name="model">dowfranchise.business</field>
+            <field name="arch" type="xml">
+                <tree string="Business">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_business_act'>
+            <field name="name">Business</field>
+            <field name="res_model">dowfranchise.business</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new business.
+              </p><p>
+                You can create multiple businesss.
+              </p>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_locationarea_form'>
+            <field name="name">dowfranchise.locationarea.form</field>
+            <field name="model">dowfranchise.locationarea</field>
+            <field name="arch" type="xml">
+                <form string="Location Area">
+                    <sheet string="Location Area">
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_locationarea_tree'>
+            <field name="name">dowfranchise.locationarea.tree</field>
+            <field name="model">dowfranchise.locationarea</field>
+            <field name="arch" type="xml">
+                <tree string="Location Area">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_locationarea_act'>
+            <field name="name">Location Area</field>
+            <field name="res_model">dowfranchise.locationarea</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new location area.
+              </p><p>
+                You can create multiple location areas.
+              </p>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_locationarea_form'>
+            <field name="name">dowfranchise.locationarea.form</field>
+            <field name="model">dowfranchise.locationarea</field>
+            <field name="arch" type="xml">
+                <form string="Termination Reason">
+                    <sheet string="Termination Reason">
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_terminationreason_tree'>
+            <field name="name">dowfranchise.locationarea.tree</field>
+            <field name="model">dowfranchise.locationarea</field>
+            <field name="arch" type="xml">
+                <tree string="Termination Reason">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_terminationreason_act'>
+            <field name="name">Termination Reason</field>
+            <field name="res_model">dowfranchise.terminationreason</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new termination reason.
+              </p><p>
+                You can create multiple termination reasons.
+              </p>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_attribute_form'>
+            <field name="name">dowfranchise.attribute.form</field>
+            <field name="model">dowfranchise.attribute</field>
+            <field name="arch" type="xml">
+                <form string="Attribute">
+                    <sheet string="Attribute">
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_attribute_tree'>
+            <field name="name">dowfranchise.attribute.tree</field>
+            <field name="model">dowfranchise.attribute</field>
+            <field name="arch" type="xml">
+                <tree string="Attribute">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_attribute_act'>
+            <field name="name">Attribute</field>
+            <field name="res_model">dowfranchise.attribute</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new attribute.
+              </p><p>
+                You can create multiple attributes.
+              </p>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_criteria_form'>
+            <field name="name">dowfranchise.criteria.form</field>
+            <field name="model">dowfranchise.criteria</field>
+            <field name="arch" type="xml">
+                <form string="Criteria">
+                    <sheet string="Criteria">
+                        <group>
+                            <field name="name"/>
+                            <field name="weight"/>
+                            <field name="weight_readonly"/>
+                            <field name="attribute_id"/>
+                            <field name="business_ids" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_criteria_tree'>
+            <field name="name">dowfranchise.criteria.tree</field>
+            <field name="model">dowfranchise.criteria</field>
+            <field name="arch" type="xml">
+                <tree string="Criteria">
+                    <field name="name"/>
+                    <field name="weight"/>
+                    <field name="weight_readonly"/>
+                    <field name="attribute_id"/>
+                    <field name="business_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_criteria_act'>
+            <field name="name">Criteria</field>
+            <field name="res_model">dowfranchise.criteria</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new criteria.
+              </p><p>
+                You can create multiple criterias.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="dowfranchise_business_act" parent="dowfranchise_masterdata" id="dowfranchise_business_menu" sequence="10" groups="group_dowfranchise_user"/>
+        <menuitem action="dowfranchise_businessline_act" parent="dowfranchise_masterdata" id="dowfranchise_businessline_menu" sequence="20" groups="group_dowfranchise_user"/>
+        <menuitem action="dowfranchise_culture_act" parent="dowfranchise_masterdata" id="dowfranchise_culture_menu" sequence="30" groups="group_dowfranchise_user"/>
+        <menuitem action="dowfranchise_attribute_act" parent="dowfranchise_masterdata" id="dowfranchise_attribute_menu" sequence="40" groups="group_dowfranchise_user"/>
+        <menuitem action="dowfranchise_criteria_act" parent="dowfranchise_masterdata" id="dowfranchise_criteria_menu" sequence="50" groups="group_dowfranchise_user"/>
+        <menuitem action="dowfranchise_terminationreason_act" parent="dowfranchise_masterdata" id="dowfranchise_terminationreason_menu" sequence="60" groups="group_dowfranchise_user"/>
+        <menuitem action="dowfranchise_locationarea_act" parent="dowfranchise_masterdata" id="dowfranchise_locationarea_menu" sequence="70" groups="group_dowfranchise_user"/>
+
+        <record model='ir.ui.view' id='dowfranchise_request_form'>
+            <field name="name">dowfranchise.request.form</field>
+            <field name="model">dowfranchise.request</field>
+            <field name="arch" type="xml">
+                <form id="mainform">
+                    <header>
+                        <button name="act_confirm_request" string="Confirm Request" attrs="{'invisible': [('stage_id', '!=', 'draft')]}" class="oe_highlight" groups="dowfranchise.group_dowfranchise_user"/>
+                        <button name="act_send_email" string="Send Email" attrs="{'invisible': [('stage_id', '!=', 'ongoing')]}" groups="dowfranchise.group_dowfranchise_user"/>
+                        <button name="act_print_request" string="Print" groups="dowfranchise.group_dowfranchise_user"/>
+                        <button name="act_approve_request" string="Approve" attrs="{'invisible': [('stage_id', '!=', 'ongoing')]}" class="oe_highlight" groups="dowfranchise.group_dowfranchise_user"/>
+                        <button name="act_decline_request" string="Decline" attrs="{'invisible': [('stage_id', '!=', 'ongoing')]}" class="oe_highlight" groups="dowfranchise.group_dowfranchise_user"/>
+                        <field name="stage_id" widget="statusbar" clickable="True"/>
+                    </header>
+                    <sheet id="mainsheet">
+                        <group id="maingroup">
+                            <h1 id="maintitle">
+                                <field name="name" placeholder="Request Name..." class="oe_inline"/>
+                            </h1>
+                        </group>
+                        <group id="approvalgroup" string="Approval Routing">
+                            <field name="approval_ids">
+                                <tree editable="bottom">
+                                    <field name="group_id"/>
+                                    <field name="approval_uid"/>
+                                    <field name="approval_date"/>
+                                    <field name="status_id"/>
+                                    <field name="comment"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_request_tree'>
+            <field name="name">dowfranchise.request.tree</field>
+            <field name="model">dowfranchise.request</field>
+            <field name="arch" type="xml">
+                <tree string="Request">
+                    <field name="name"/>
+                    <field name="create_date"/>
+                    <field name="stage_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_request_act'>
+            <field name="name">Request</field>
+            <field name="res_model">dowfranchise.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new request.
+              </p><p>
+                You can create multiple request.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="dowfranchise_request_act" parent="dowfranchise_formrequest" id="dowfranchise_request_menu" groups="group_dowfranchise_user"/>
+
+        <record model='ir.ui.view' id='dowfranchise_requesttermination_form'>
+            <field name="name">dowfranchise.requesttermination.form</field>
+            <field name="model">dowfranchise.requesttermination</field>
+            <field name="inherit_id" ref="dowfranchise.dowfranchise_request_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <label string="Request Termination Form "/>
+                </xpath>
+                <!--
+                <xpath expr="//group[@id='titlegroup']" position="after">
+                    <group id="buttongroup">
+                        <button class="oe_inline oe_stat_button" type="object" icon="fa-calendar">
+                            <div>Meeting</div>
+                        </button>
+                    </group>
+                </xpath>
+                -->
+                <xpath expr="//group[@id='maingroup']" position="after">
+                    <group>
+                        <group>
+                            <field name="request_uid"/>
+                        </group>
+                        <group>
+                            <field name="request_date"/>
+                        </group>
+                    </group>
+                    <group string="Main">
+                        <group>
+                            <field name="legal_name"/>
+                            <field name="partner_name"/>
+                            <field name="locationarea_id"/> 
+                        </group>
+                        <group>
+                            <field name="businessline_ids" widget="many2many_tags"/>
+                            <field name="franchisemanager_uid"/>
+                            <field name="expected_termination_date"/>
+                        </group>
+                    </group>
+                    <group string="Termination Reason">
+                        <field name="reason_id"/>
+                        <field name="reason_comment"/>
+                    </group>
+                    <group string="Proofs Attachaments">
+                        <field name="proof_ids">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                    </group>
+                </xpath>
+                <xpath expr="//group[@id='approvalgroup']" position="after">
+                    <group string="Termination Meeting">
+                        <field name="meeting_date"/>
+                        <field name="attended_uids" widget="many2many_tags"/>
+                        <field name="meeting_summary"/>
+                    </group>
+                    <group string="Legal Departament">
+                        <field name="legal_comment"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='dowfranchise_requesttermination_tree'>
+            <field name="name">dowfranchise.requesttermination.tree</field>
+            <field name="model">dowfranchise.requesttermination</field>
+            <field name="inherit_id" ref="dowfranchise.dowfranchise_request_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='stage_id']" position="after">
+                    <field name="legal_name"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='dowfranchise_requesttermination_act'>
+            <field name="name">Request Termination</field>
+            <field name="res_model">dowfranchise.requesttermination</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new request termination.
+              </p><p>
+                You can create multiple request termination.
+              </p>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window.view' id='dowfranchise_requesttermination_act_tree'>
+            <field name="name">Request Termination</field>
+            <field name="res_model">dowfranchise.requesttermination</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="dowfranchise_requesttermination_tree"/>
+            <field name="act_window_id" ref="dowfranchise_requesttermination_act"/>
+        </record>
+
+        <record model='ir.actions.act_window.view' id='dowfranchise_requesttermination_act_form'>
+            <field name="name">Request Termination</field>
+            <field name="res_model">dowfranchise.requesttermination</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="dowfranchise_requesttermination_form"/>
+            <field name="act_window_id" ref="dowfranchise_requesttermination_act"/>
+        </record>
+
+        <menuitem action="dowfranchise_requesttermination_act" parent="dowfranchise_formrequest" id="dowfranchise_requesttermination_menu" groups="group_dowfranchise_user"/>
+
+    </data>
+</openerp>
+    

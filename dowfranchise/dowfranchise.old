@@ -1,0 +1,63 @@
+from openerp.osv import fields, osv
+#from osv import fields, osv
+
+class dowfranchise_culture(osv.Model):
+
+    _name = 'dowfranchise.culture'
+    _description = 'Cultures'
+    _columns = {
+            'name' : fields.char('Name', size=100, required=True),
+            'business_ids' : fields.many2many('dowfranchise.business', 'dowfranchise_culture_dowfranchise_business_rel', 'dowfranchise_culture_id', 'dowfranchise_business_id', string='Business'),
+        }
+
+class dowfranchise_businessline(osv.Model):
+
+    _name = 'dowfranchise.businessline'
+    _description = 'Business Lines'
+    _columns = {
+            'name' : fields.char('Name', size=100, required=True),
+            # 'business_ids' : fields.many2many('dowfranchise.business', 'dowfranchise_businessline_dowfranchise_business_rel', 'dowfranchise_businessline_id', 'dowfranchise_business_id', string='Business'),
+        }
+
+class dowfranchise_business(osv.Model):
+
+    _name = 'dowfranchise.business'
+    _description = 'Business'
+    _columns = {
+            'name' : fields.char('Name', size=100, required=True),
+        }
+
+class dowfranchise_attribute(osv.Model):
+
+    _name = 'dowfranchise.attribute'
+    _description = 'Attributes'
+    _columns = {
+            'name' : fields.char('Name', size=100, required=True),
+        }
+
+class dowfranchise_criteria(osv.Model):
+
+    _name = 'dowfranchise.criteria'
+    _description = 'Criterias'
+    _columns = {
+            'name' : fields.char('Name', size=100, required=True),
+            'weight' : fields.char('Weight', size=100, default='0'),
+            'weight_readonly' : fields.boolean('Weight readonly', default=False),
+            'attribute_id' : fields.many2one('dowfranchise.attribute', 'Attribute', size=100, required=True),
+            'business_ids' : fields.many2many('dowfranchise.business', 'dowfranchise_criteria_dowfranchise_business_rel', 'dowfranchise_criteria_id', 'dowfranchise_business_id', string='Business', required=True),
+        }
+        
+class dowfranchise_requestexpanding(osv.Model):
+
+    _name = 'dowfranchise.requestexpanding'
+    _description = 'Request expanding'
+    _columns = {
+            'request_type' : fields.char('Name', size=100, required=True),
+            'user_id' : fields.char('User', size=100, required=True),
+            'location_area' : fields.char('Location Area', size=100, required=True),
+            'future_entry_date' : fields.datetime('Future entry date', required=True),
+            # 'businessline_ids' : fields.many2many('dowfranchise.businessline', 'dowfranchise_requestexpanding_dowfranchise_businessline_rel', 'dowfranchise_requestexpanding_id', 'dowfranchise_businessline_id', string='Business Line', required=True),
+            'businessline-ids' : fields.char('Business Line', size=100, required=True),
+            'business_id' : fields.many2one('dowfranchise.business', 'Business', required=True),
+            'stage_id': fields.selection([('draft', 'Draft'),('approved', 'Approved'),('reproved', 'Reproved'),], 'Stage', default='draft'),
+        }
